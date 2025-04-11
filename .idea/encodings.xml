@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$/backEnd/Paiment/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backEnd/Paiment/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backEnd/ProductGestion/src/main/java" charset="UTF-8" />
@@ -20,5 +21,8 @@
     <file url="file://$PROJECT_DIR$/backEnd/getway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backEnd/getway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/backEnd/server-config/src/main/java" charset="UTF-8" />
+=======
+    <file url="file://$PROJECT_DIR$/backEnd/demandeGestion/src/main/java" charset="UTF-8" />
+>>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
   </component>
 </project>

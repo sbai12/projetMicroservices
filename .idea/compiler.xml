@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
+<<<<<<< HEAD
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -12,6 +13,9 @@
         <module name="configserver" />
       </profile>
       <profile name="Annotation profile for demo" enabled="true">
+=======
+      <profile name="Annotation profile for demandeGestion" enabled="true">
+>>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -19,6 +23,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="demandeGestion" />
+<<<<<<< HEAD
         <module name="ProductGestion" />
         <module name="demo" />
         <module name="Paiment" />
@@ -42,6 +47,14 @@
       <module name="eureka" options="-parameters" />
       <module name="getway" options="-parameters" />
       <module name="server-config" options="-parameters" />
+=======
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demandeGestion" options="-parameters" />
+>>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
     </option>
   </component>
 </project>
