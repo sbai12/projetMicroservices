@@ -19,7 +19,7 @@
         </processorPath>
         <module name="commandeGestion" />
       </profile>
-      <profile name="Annotation profile for demo" enabled="true">
+      <profile name="Annotation profile for UserGestion" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -28,14 +28,18 @@
         </processorPath>
         <module name="demandeGestion" />
         <module name="ProductGestion" />
-        <module name="demo" />
+        <module name="Livraison" />
         <module name="Paiment" />
         <module name="UserGestion" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Livraison" options="-parameters" />
       <module name="Paiment" options="-parameters" />
       <module name="ProductGestion" options="-parameters" />
       <module name="UserGestion" options="-parameters" />

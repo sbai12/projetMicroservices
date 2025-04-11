@@ -1,0 +1,163 @@
+version: '3.8'
+
+services:
+  # Eureka Server
+  eureka-server:
+    image: openjdk:17-jdk-slim
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    volumes:
+      - ./eureka/target/eureka-0.0.1-SNAPSHOT.jar:/app/app.jar
+    command: ["java", "-jar", "/app/app.jar"]
+    networks:
+      - microservices-net
+
+  # MySQL for Livraison
+  mysql-livraison:
+    image: mysql:5.7
+    container_name: mysql-livraison
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: LivraisonGestion
+    ports:
+      - "3306:3306"
+    networks:
+      - microservices-net
+
+  # Paiment Microservice
+  paiment-service:
+    build:
+      context: ./paiment
+    container_name: paiment-service
+    ports:
+      - "8086:8086"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-paiment:3306/PaimentGestion
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - mysql-paiment
+      - eureka-server
+    networks:
+      - microservices-net
+
+  # MySQL for Paiment
+  mysql-paiment:
+    image: mysql:5.7
+    container_name: mysql-paiment
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: PaimentGestion
+    ports:
+      - "3307:3306"
+    networks:
+      - microservices-net
+
+  # Livraison Microservice
+  livraison-service:
+    build:
+      context: ./livraison
+    container_name: livraison-service
+    ports:
+      - "8084:8084"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-livraison:3306/LivraisonGestion
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - mysql-livraison
+      - eureka-server
+    networks:
+      - microservices-net
+
+  # MySQL for UserGestion
+  mysql-user:
+    image: mysql:5.7
+    container_name: mysql-user
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: userGestion
+    ports:
+      - "3308:3306"
+    networks:
+      - microservices-net
+
+  # UserGestion Microservice
+  user-gestion-service:
+    build:
+      context: ./usergestion
+    container_name: user-gestion-service
+    ports:
+      - "8085:8085"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-user:3306/userGestion
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - mysql-user
+      - eureka-server
+    networks:
+      - microservices-net
+
+  # MySQL for DemandeGestion
+  mysql-demande:
+    image: mysql:5.7
+    container_name: mysql-demande
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: DemandeGestion
+    ports:
+      - "3309:3306"
+    networks:
+      - microservices-net
+
+  # DemandeGestion Microservice
+  demande-gestion-service:
+    build:
+      context: ./demandegestion
+    container_name: demande-gestion-service
+    ports:
+      - "8088:8088"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-demande:3306/DemandeGestion
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - mysql-demande
+      - eureka-server
+    networks:
+      - microservices-net
+
+  # ProductGestion Microservice
+  product-gestion-service:
+    build:
+      context: ./productgestion
+    container_name: product-gestion-service
+    ports:
+      - "8087:8087"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql-product:3306/ProductGestion
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=
+    depends_on:
+      - mysql-product
+      - eureka-server
+    networks:
+      - microservices-net
+
+  # MySQL for ProductGestion
+  mysql-product:
+    image: mysql:5.7
+    container_name: mysql-product
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: ProductGestion
+    ports:
+      - "3310:3306"
+    networks:
+      - microservices-net
+
+networks:
+  microservices-net:
+    driver: bridge

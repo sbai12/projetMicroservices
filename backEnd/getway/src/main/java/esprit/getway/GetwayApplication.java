@@ -18,13 +18,21 @@ public class GetwayApplication {
     @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
         return builder.routes()
-                .route("user",
-                        r->r.path("/user/**")
-                                .uri("lb://user"))
-                .route("user",
-                        r->r.path("/commande/**")
-                                .uri("lb://commande"))
-
+                .route("user-service",
+                        r -> r.path("/UserGestion/**")
+                                .uri("lb://UserGestion"))
+                .route("commande-service",
+                        r -> r.path("/commandeGestion/**")
+                                .uri("lb://commandeGestion"))
+                .route("produit-service",
+                        r -> r.path("/ProductGestion/**")
+                                .uri("lb://ProductGestion"))
+                .route("paiement-service",
+                        r -> r.path("/Paiment/**")
+                                .uri("lb://Paiment"))
+                .route("livraison-service",
+                        r -> r.path("/Livraison/**")
+                                .uri("lb://Livraison"))
                 .build();
 
     }
