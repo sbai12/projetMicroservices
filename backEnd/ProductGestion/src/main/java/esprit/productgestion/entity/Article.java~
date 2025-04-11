@@ -1,0 +1,104 @@
+package esprit.productgestion.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.*;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
+public class Article {
+    @Id
+    @GeneratedValue
+    private int id;
+
+     String artdesign;
+    float prix;
+     double qtestock;
+     int tauxremise;
+     String artimg;
+     String artdesc;
+     String artcategory;
+    String marque;
+
+
+
+    public int getArtid() {
+        return id;
+    }
+
+    public void setArtid(int artid) {
+        this.id = artid;
+    }
+
+    public String getArtdesign() {
+        return artdesign;
+    }
+
+    public void setArtdesign(String artdesign) {
+        this.artdesign = artdesign;
+    }
+
+    public float getPrix() {
+        return prix;
+    }
+
+    public void setPrix(float prix) {
+        this.prix = prix;
+    }
+
+    public double getQtestock() {
+        return qtestock;
+    }
+
+    public void setQtestock(double qtestock) {
+        this.qtestock = qtestock;
+    }
+
+    public int getTauxremise() {
+        return tauxremise;
+    }
+
+    public void setTauxremise(int tauxremise) {
+        this.tauxremise = tauxremise;
+    }
+
+    public String getArtimg() {
+        return artimg;
+    }
+
+    public void setArtimg(String artimg) {
+        this.artimg = artimg;
+    }
+
+    public String getArtdesc() {
+        return artdesc;
+    }
+
+    public void setArtdesc(String artdesc) {
+        this.artdesc = artdesc;
+    }
+
+    public String getArtcategory() {
+        return artcategory;
+    }
+
+    public void setArtcategory(String artcategory) {
+        this.artcategory = artcategory;
+    }
+
+    public String getMarque() {
+        return marque;
+    }
+
+    public void setMarque(String marque) {
+        this.marque = marque;
+    }
+
+
+}

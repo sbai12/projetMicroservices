@@ -1,0 +1,4 @@
+package esprit.productgestion.Repository;
+
+public class ProductRepository {
+}
