@@ -63,13 +63,11 @@ Manipuler des outils modernes de déploiement comme Docker, Kubernetes, et les p
 
 Travailler avec des bases de données variées, adaptées aux besoins métier.
 
-🎓 Remerciements
-Ce projet fait partie d’un programme d’apprentissage visant à appliquer les concepts d’architecture logicielle moderne. Il est développé par une équipe d’étudiants de [Nom de ton université ou institut].
 
 👨‍🏫 Contact
-LinkedIn : [Ajoute ici ton lien LinkedIn]
+LinkedIn : 
 
-Email : [Ajoute ici ton adresse email]
+Email :
 
 📄 Documentation complémentaire
 Chaque microservice dispose de sa propre documentation (README.md) expliquant sa configuration, son fonctionnement et son exécution.
