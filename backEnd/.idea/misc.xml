@@ -12,7 +12,10 @@
         <option value="$PROJECT_DIR$/demandeGestion/pom.xml" />
         <option value="$PROJECT_DIR$/ProductGestion/pom.xml" />
         <option value="$PROJECT_DIR$/commandeGestion/pom.xml" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/livraison/pom.xml" />
+=======
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
       </list>
     </option>
   </component>

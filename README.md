@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# 🛍️ Luxury Watch & Accessories - Product Management Microservice
+
+une application de gestion de produits de luxe (montres, accessoires). Il gère les **articles** (ajout, modification, suppression, consultation) via un microservice Spring Boot.
+
+---
+
+## 🔧 Technologies utilisées
+
+- **Java 17**
+- **Spring Boot**
+- **Spring Data JPA**
+- **MySQL**
+- **Maven**
+- **Angular**
+
+---
+
+## 🗂️ Fonctionnalités
+
+✅ CRUD sur les articles :  
+- Ajouter un article  
+- Modifier un article  
+- Supprimer un article  
+- Consulter un ou tous les articles  
+
+📦 Chaque article contient les champs :
+- `artid` : ID unique
+- `artdesign` : Désignation
+- `prix` : Prix
+- `qtestock` : Quantité en stock
+- `tauxremise` : Remise %
+- `artimg` : Lien vers l'image
+- `artdesc` : Description
+- `artcategory` : Catégorie
+- `marque` : Marque
+
+---
+=======
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
 🌟 Royale Time - Luxury E-Commerce Platform
 📌 À propos du projet
 Royale Time est une plateforme e-commerce haut de gamme dédiée à la vente de montres et d’accessoires de luxe. Elle vise à offrir une expérience d’achat exclusive pour les membres VIP, avec une sélection rigoureuse de produits premium.
@@ -75,3 +117,7 @@ Chaque microservice dispose de sa propre documentation (README.md) expliquant sa
 Un guide complet d’utilisation de Keycloak est également fourni pour la configuration de la sécurité.
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 28b4b6a49e0000944ab16cc529d60b1c6fc9b7f5
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733

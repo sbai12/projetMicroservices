@@ -2,13 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+<<<<<<< HEAD
       <profile name="Annotation profile for UserGestion" enabled="true">
+=======
+      <profile default="true" name="Default" enabled="true" />
+<<<<<<< HEAD
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="getway" />
+        <module name="eureka" />
+        <module name="configserver" />
+      </profile>
+      <profile name="Annotation profile for demo" enabled="true">
+=======
+      <profile name="Annotation profile for demandeGestion" enabled="true">
+>>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
+<<<<<<< HEAD
         <module name="UserGestion" />
       </profile>
     </annotationProcessing>
@@ -16,6 +34,41 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="UserGestion" options="-parameters" />
+=======
+        <module name="demandeGestion" />
+<<<<<<< HEAD
+        <module name="ProductGestion" />
+        <module name="demo" />
+        <module name="Paiment" />
+        <module name="commandeGestion" />
+        <module name="UserGestion" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="server-config" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Paiment" options="-parameters" />
+      <module name="ProductGestion" options="-parameters" />
+      <module name="UserGestion" options="-parameters" />
+      <module name="commandeGestion" options="-parameters" />
+      <module name="configserver" options="-parameters" />
+      <module name="demandeGestion" options="-parameters" />
+      <module name="demo" options="-parameters" />
+      <module name="eureka" options="-parameters" />
+      <module name="getway" options="-parameters" />
+      <module name="server-config" options="-parameters" />
+=======
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demandeGestion" options="-parameters" />
+>>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
     </option>
   </component>
 </project>

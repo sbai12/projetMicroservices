@@ -13,6 +13,7 @@
       </jdbc-additional-properties>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+<<<<<<< HEAD
     <data-source source="LOCAL" name="ProductGestion@mysql-product" uuid="78de1ad9-0008-4e52-a239-5e75965584a4">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
@@ -63,5 +64,7 @@
       <jdbc-url>jdbc:mysql://mysql-demande:3306/demandeGestion?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+=======
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
   </component>
 </project>

@@ -10,6 +10,7 @@
         <module name="getway" />
         <module name="eureka" />
       </profile>
+<<<<<<< HEAD
       <profile name="Annotation profile for commandeGestion" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -20,6 +21,9 @@
         <module name="commandeGestion" />
       </profile>
       <profile name="Annotation profile for UserGestion" enabled="true">
+=======
+      <profile name="Annotation profile for demo" enabled="true">
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -28,6 +32,7 @@
         </processorPath>
         <module name="demandeGestion" />
         <module name="ProductGestion" />
+<<<<<<< HEAD
         <module name="Livraison" />
         <module name="Paiment" />
         <module name="UserGestion" />
@@ -40,6 +45,17 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Livraison" options="-parameters" />
+=======
+        <module name="demo" />
+        <module name="Paiment" />
+        <module name="commandeGestion" />
+        <module name="UserGestion" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
       <module name="Paiment" options="-parameters" />
       <module name="ProductGestion" options="-parameters" />
       <module name="UserGestion" options="-parameters" />
