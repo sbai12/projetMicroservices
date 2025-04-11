@@ -1,0 +1,5 @@
+package esprit.productgestion.Service;
+
+public interface ProductService {
+
+}
