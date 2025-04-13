@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 # 🛍️ Luxury Watch & Accessories - Product Management Microservice
 
 une application de gestion de produits de luxe (montres, accessoires). Il gère les **articles** (ajout, modification, suppression, consultation) via un microservice Spring Boot.
@@ -117,7 +115,4 @@ Chaque microservice dispose de sa propre documentation (README.md) expliquant sa
 Un guide complet d’utilisation de Keycloak est également fourni pour la configuration de la sécurité.
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 28b4b6a49e0000944ab16cc529d60b1c6fc9b7f5
->>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
+
