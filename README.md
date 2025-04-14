@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+# 💳 Royale Time - Payment Microservice
+
+Handles payment processing through multiple gateways (Stripe, PayPal, Crypto).
+
+---
+
+## 🔧 Technologies Used
+
+- Node.js / Spring Boot
+- REST APIs
+- Payment Gateway SDKs (clicktopay, PayPal)
+- Kafka/RabbitMQ
+- Eureka Client
+
+---
+
+## 🗂️ Features
+
+✅ Initiate and verify payments  
+✅ Support for credit cards, crypto, and bank transfers  
+✅ Send confirmation events to Order Service  
+
+---
+
+## 🔁 API Endpoints
+
+| Method | Endpoint             | Description              |
+|--------|----------------------|--------------------------|
+| POST   | `/payments/initiate` | Start payment process    |
+| GET    | `/payments/status`   | Check payment status     |
+| POST   | `/payments/webhook`  | Handle gateway callbacks |
+
+---
+=======
 
 # 🛍️ Luxury Watch & Accessories - Product Management Microservice
 
@@ -115,4 +150,5 @@ Chaque microservice dispose de sa propre documentation (README.md) expliquant sa
 Un guide complet d’utilisation de Keycloak est également fourni pour la configuration de la sécurité.
 
 
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 

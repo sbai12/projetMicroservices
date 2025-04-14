@@ -41,7 +41,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+<<<<<<< HEAD
+=======
 
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -67,6 +70,8 @@
 			<artifactId>spring-cloud-commons</artifactId>
 			<version>4.2.0</version>
 		</dependency>
+<<<<<<< HEAD
+=======
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
@@ -107,6 +112,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -117,6 +123,9 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+<<<<<<< HEAD
+		</dependencies>
+=======
 
 				<dependency>
 					<groupId>org.springframework.cloud</groupId>
@@ -127,6 +136,7 @@
 				</dependency>
 			</dependencies>
 
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	</dependencyManagement>
 
 	<build>

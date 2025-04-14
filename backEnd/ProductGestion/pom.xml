@@ -7,7 +7,15 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
+<<<<<<< HEAD
 		<version>3.2.0</version> <!-- Version mise à jour vers la dernière version stable de Spring Boot 3.x -->
+=======
+<<<<<<< HEAD
+		<version>3.4.2</version>
+=======
+		<version>3.4.3</version>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
+>>>>>>> 40d3fbd9e0620a72ab90fc44210207c50c6dd228
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -61,6 +69,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
+=======
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
@@ -71,6 +81,7 @@
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	</dependencies>
 
 	<dependencyManagement>
@@ -83,6 +94,8 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+<<<<<<< HEAD
+=======
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -90,6 +103,7 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 		</dependencies>
 	</dependencyManagement>
 

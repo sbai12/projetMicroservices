@@ -1,5 +1,20 @@
 package esprit.demandegestion.restController;
 
+<<<<<<< HEAD
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/Demande")
+public class DemandeRestController {
+    private String title="Hello, i'm the Demande Micro-Service";
+    @RequestMapping("/hello")
+    public String sayHello(){
+        System.out.println(title);
+        return title;
+    }
+}
+=======
 import esprit.demandegestion.entity.Demande;
 import esprit.demandegestion.services.DemandeService;
 import jakarta.validation.Valid;
@@ -69,3 +84,4 @@ public class DemandeRestController {
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451

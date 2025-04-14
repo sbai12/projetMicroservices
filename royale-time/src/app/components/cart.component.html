@@ -1,0 +1,38 @@
+<section class="cart">
+    <h2>Votre Panier</h2>
+    <div *ngIf="items.length > 0; else emptyCart">
+      <div *ngFor="let item of items" class="cart-item">
+        <input type="checkbox" [(ngModel)]="item.selected" />
+
+        <img [src]="item.image" alt="{{ item.nom }}">
+        <div class="details">
+          <h4>{{ item.nom }}</h4>
+          <p>{{ item.prix }}</p>
+        </div>
+      </div>
+      <button (click)="passerCommande()" class="btn btn-primary mt-3">
+        Passer la commande
+      </button>
+      <hr>
+      <p class="total">Total : {{ total | currency:'EUR' }}</p>
+      <button (click)="clearCart()" class="btn btn-danger">Vider le panier</button>
+    </div>
+    <div class="modal-backdrop" *ngIf="commandeVisible">
+        <div class="modal-content">
+          <h3>Confirmation de commande</h3>
+          <ul>
+            <li *ngFor="let produit of produitsCommandes">
+              {{ produit.nom }} - {{ produit.prix }}
+            </li>
+          </ul>
+          <p><strong>Total :</strong> {{ totalCommande | currency:'EUR' }}</p>
+      
+          <button class="btn btn-success" (click)="confirmerCommande()">Confirmer</button>
+          <button class="btn btn-secondary" (click)="fermerCommande()">Annuler</button>
+        </div>
+      </div>
+    <ng-template #emptyCart>
+      <p>Votre panier est vide.</p>
+    </ng-template>
+  </section>
+  
