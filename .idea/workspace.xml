@@ -5,8 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="835c63b3-e2d7-4d12-a943-fb70c23d35b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backEnd/demandeGestion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/demandeGestion/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backEnd/demandeGestion/src/main/java/esprit/demandegestion/restController/DemandeRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/demandeGestion/src/main/java/esprit/demandegestion/restController/DemandeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/Paiment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/Paiment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/Paiment/src/main/java/esprit/paiment/PaimentApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/Paiment/src/main/java/esprit/paiment/PaimentApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/Paiment/src/main/java/esprit/paiment/services/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/Paiment/src/main/java/esprit/paiment/services/PaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/ProductGestion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/ProductGestion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/UserGestion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/UserGestion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/commandeGestion/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/commandeGestion/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/java/esprit/commandegestion/CommandeGestionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/java/esprit/commandegestion/CommandeGestionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/java/esprit/commandegestion/entity/Orderr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/java/esprit/commandegestion/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/java/esprit/commandegestion/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/commandeGestion/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backEnd/livraison/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backEnd/livraison/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +39,19 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2vaaCJAyLDZdb6U0aE6doMya1Z4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,7 +66,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.codeium.enabled": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/projetMicroservices/backEnd/commandeGestion/src/main/java/esprit/commandegestion",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,10 +76,53 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projetMicroservices\backEnd\commandeGestion\src\main\java\esprit\commandegestion" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="esprit.commandegestion.entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemandeGestionApplication">
+    <configuration name="CommandeGestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="commandeGestion" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.commandegestion.CommandeGestionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DemandeGestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="demandeGestion" />
+      <module name="projetMicroservices" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.demandegestion.DemandeGestionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LivraisonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Livraison" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.livraison.LivraisonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaimentApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Paiment" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.paiment.PaimentApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductGestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="ProductGestion" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.productgestion.ProductGestionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserGestionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="UserGestion" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="esprit.usergestion.UserGestionApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,6 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744385510220</updated>
       <workItem from="1744385511338" duration="2018000" />
+      <workItem from="1744575717827" duration="14508000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,4 @@
+package esprit.commandegestion.FeignClient;
+
+public interface UserFeignClient {
+}

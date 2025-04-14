@@ -1,0 +1,4 @@
+package esprit.paiment.DTO;
+
+public class UserDTO {
+}
