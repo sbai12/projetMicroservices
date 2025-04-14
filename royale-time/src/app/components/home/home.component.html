@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<section class="produits">
+    <h2>Nos Produits</h2>
+    <div class="produit-card" *ngFor="let produit of produits">
+      <img [src]="produit.image" alt="{{ produit.nom }}">
+      <h3>{{ produit.nom }}</h3>
+      <p>{{ produit.prix }}</p>
+      <button class="add-to-cart-btn" (click)="addToCart(produit)">
+        <img src="assets/panier.jpg" alt="Panier" class="panier-icon">
+        Ajouter au panier
+      </button>
+    </div>
+    
+  </section>

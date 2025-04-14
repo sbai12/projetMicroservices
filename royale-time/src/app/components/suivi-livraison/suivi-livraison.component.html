@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Suivi de votre livraison</h2>
+    <div class="d-flex justify-content-between align-items-center">
+      <div *ngFor="let step of ['EN_ATTENTE', 'EXPEDIEE', 'EN_COURS_DE_LIVRAISON', 'LIVREE']"
+           class="text-center flex-fill">
+        <div class="rounded-circle mx-auto mb-2"
+             [ngClass]="{
+               'bg-success': statut === step || stepAvant(step),
+               'bg-secondary': !stepAvant(step) && statut !== step
+             }"
+             style="width: 40px; height: 40px; line-height: 40px; color: white;">
+          ✔
+        </div>
+        <small>{{ formatStep(step) }}</small>
+    </div>
+    </div>
+  
+    <div *ngIf="statut === 'ANNULEE'" class="alert alert-danger mt-4 text-center">
+      Livraison annulée ❌
+    </div>
+  </div>
+  
