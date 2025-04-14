@@ -4,28 +4,22 @@ import { CartService } from '../services/cart.service';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 
-
-
-
 @Component({
   selector: 'app-cart',
   standalone: true,
-
   imports: [CommonModule, FormsModule],
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
-
 })
 export class CartComponent {
   
   items: any[] = [];
   total: number = 0;
   commandeVisible = false;
-produitsCommandes: any[] = [];
-totalCommande: number = 0;
+  produitsCommandes: any[] = [];
+  totalCommande: number = 0;
 
-
-  constructor(private cartService: CartService,private router: Router) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit() {
     this.items = this.cartService.getCartItems().map(item => ({ ...item, selected: false }));
@@ -55,5 +49,4 @@ totalCommande: number = 0;
     this.total = 0;
     this.commandeVisible = false;
   }
-
 }

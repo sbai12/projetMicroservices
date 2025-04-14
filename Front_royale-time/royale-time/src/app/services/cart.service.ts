@@ -1,4 +1,3 @@
-// src/app/services/cart.service.ts
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -6,35 +5,47 @@ import { Injectable } from '@angular/core';
 })
 export class CartService {
   private items: any[] = [];
-  private produitsSelectionnes: any[] = [];
-  addToCart(product: any) {
-    product.selected = false;
+
+  constructor() {}
+
+  // Ajoute un produit au panier
+  addToCart(product: any): void {
     this.items.push(product);
   }
-  
-  
 
-  getCartItems() {
+  // Retourne tous les produits dans le panier
+  getItems(): any[] {
     return this.items;
   }
 
-  clearCart() {
-    this.items = [];
+  // Alias optionnel pour getItems() → règle l'erreur getCartItems()
+  getCartItems(): any[] {
+    return this.getItems();
   }
-  getTotalItems() {
+
+  // Retourne le nombre total d'articles
+  getTotalItems(): number {
     return this.items.length;
   }
-  getTotalPrice() {
-    return this.items.reduce((total, item) => {
-      const prix = parseFloat(item.prix.replace(/[^\d.-]/g, ''));
-      return total + prix;
-    }, 0);
+
+  // Supprime tous les articles
+  clearCart(): void {
+    this.items = [];
   }
-  setProduitsSelectionnes(items: any[]) {
-    this.produitsSelectionnes = items;
+
+  // Ajoute une méthode pour setProduitsSelectionnes() si nécessaire
+  setProduitsSelectionnes(produits: any[]): void {
+    // Tu peux gérer les produits sélectionnés comme tu le souhaites ici
+    this.items = produits;
   }
-  
-  getProduitsSelectionnes() {
-    return this.produitsSelectionnes;
+
+  // Ajoute une méthode pour getProduitsSelectionnes() si nécessaire
+  getProduitsSelectionnes(): any[] {
+    return this.items.filter(item => item.selected); // Retourne les produits sélectionnés
+  }
+
+  // Calcul du prix total
+  getTotalPrice(): number {
+    return this.items.reduce((total, item) => total + item.price, 0); // Calcul du prix total
   }
 }

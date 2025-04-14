@@ -2,19 +2,26 @@ package com.example.livraison.service;
 
 import com.example.livraison.Repository.LivraisonRepo;
 import com.example.livraison.entity.Livraison;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@AllArgsConstructor
-@Service
 
-public class livraisonserv implements ILivraisonServ{
-    private LivraisonRepo livraisonRepo;
+@Service
+public class livraisonserv implements ILivraisonServ {
+
+    private final LivraisonRepo livraisonRepo;
+
+    // Constructeur explicite avec @Autowired
+    @Autowired
+    public livraisonserv(LivraisonRepo livraisonRepo) {
+        this.livraisonRepo = livraisonRepo;
+    }
+
     @Override
     public Livraison createLivraison(Livraison liv) {
-
         return livraisonRepo.save(liv);
     }
 
