@@ -1,6 +1,13 @@
 package esprit.paiment.services;
 
 
+<<<<<<< HEAD
+=======
+import esprit.paiment.DTO.OrderDTO;
+import esprit.paiment.DTO.UserDTO;
+import esprit.paiment.FeignClient.CommandeClient;
+import esprit.paiment.FeignClient.UserClient;
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 import esprit.paiment.model.paiment;
 import esprit.paiment.repository.PaymentRepository;
 import jakarta.transaction.Transactional;
@@ -12,8 +19,28 @@ public class PaymentService {
 
     @Autowired
     private PaymentRepository paymentRepository;
+<<<<<<< HEAD
 
     @Transactional
+=======
+    CommandeClient commandeClient;
+    UserClient userClient;
+
+    public void afficherInfoUtilisateur(Long userId) {
+        UserDTO user = userClient.getUserById(userId);
+        System.out.println("Utilisateur : " + user.getFirstName() + " " + user.getLastName());
+    }
+    public PaymentService(CommandeClient commandeClient) {
+        this.commandeClient = commandeClient;
+    }
+
+    public void verifierCommandeAvantPaiement(Long orderId) {
+        OrderDTO commande = commandeClient.getOrderById(orderId);
+        System.out.println("Commande : " + commande.getDeliveryAddress() + " | Statut : " + commande.getStatus());
+    }
+    @Transactional
+
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
     public paiment createPayment(paiment p) {
         p.setStatus("PENDING");
         return paymentRepository.save(p);

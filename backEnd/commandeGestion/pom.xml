@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.4.2</version>
+<<<<<<< HEAD
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+=======
+		<relativePath/>
+	</parent>
+
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	<groupId>esprit</groupId>
 	<artifactId>commandeGestion</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>commandeGestion</name>
 	<description>commandeGestion</description>
+<<<<<<< HEAD
 	<url/>
 	<licenses>
 		<license/>
@@ -35,15 +51,38 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+=======
+
+	<properties>
+		<java.version>17</java.version>
+		<spring-cloud.version>2024.0.0</spring-cloud.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- Web -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+<<<<<<< HEAD
+=======
+
+		<!-- JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<!-- Eureka Client -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
 
+<<<<<<< HEAD
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
@@ -54,12 +93,48 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+=======
+		<!-- MySQL Connector (fix du problème de driver JDBC) -->
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>mysql-connector-j</artifactId>
+			<version>8.0.33</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Tests -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 	</dependencies>
+=======
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
+
+	</dependencies>
+
+
+	<!-- Spring Cloud version import -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -69,23 +144,51 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+<<<<<<< HEAD
 		</dependencies>
 	</dependencyManagement>
 
+=======
+
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>2021.0.8</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<!-- Build plugins -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+<<<<<<< HEAD
 				<configuration>
+=======
+				<version>3.11.0</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 					<annotationProcessorPaths>
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
+<<<<<<< HEAD
+=======
+							<version>1.18.30</version>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
+<<<<<<< HEAD
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -97,8 +200,19 @@
 						</exclude>
 					</excludes>
 				</configuration>
+=======
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>3.4.2</version>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 			</plugin>
 		</plugins>
 	</build>
 
+<<<<<<< HEAD
 </project>
+=======
+</project>
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451

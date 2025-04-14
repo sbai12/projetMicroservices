@@ -1,0 +1,18 @@
+package esprit.commandegestion.DTO;
+
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jdk.jshell.Snippet;
+
+import java.time.LocalDateTime;
+
+public class LivraisonDTO {
+    private Long id;
+    private Long orderId;
+    private String adresse;
+    private String transporteur;
+    @Enumerated(EnumType.STRING)
+    private Statut statut;
+
+    private LocalDateTime dateLivraisonPrevue;
+}

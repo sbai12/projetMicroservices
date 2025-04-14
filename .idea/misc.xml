@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/backEnd/UserGestion/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+=======
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/backEnd/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/eureka/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/getway/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/Paiment/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/UserGestion/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/demandeGestion/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/ProductGestion/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/commandeGestion/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/server-config/pom.xml" />
+        <option value="$PROJECT_DIR$/backEnd/configserver/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/backEnd/server-config/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_20" project-jdk-name="21" project-jdk-type="JavaSDK">
+=======
+        <option value="$PROJECT_DIR$/backEnd/demandeGestion/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
+>>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
+>>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

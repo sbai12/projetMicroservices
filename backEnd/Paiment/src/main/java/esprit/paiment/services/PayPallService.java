@@ -64,8 +64,13 @@ public class PayPallService {
         Map<String, Object> paymentRequest = Map.of(
                 "intent", "sale",
                 "redirect_urls", Map.of(
+<<<<<<< HEAD
                         "return_url", "http://localhost:4200/payment-success",
                         "cancel_url", "http://localhost:4200/payment-cancel"
+=======
+                        "return_url", "http://localhost:8086/paiement/execute",
+                        "cancel_url", "http://localhost:8086/paiement/cancel"
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
                 ),
                 "payer", Map.of("payment_method", "paypal"),
                 "transactions", List.of(
@@ -86,6 +91,10 @@ public class PayPallService {
                 Map.class
         );
 
+<<<<<<< HEAD
+=======
+        // 3. Extraire l'URL de redirection de PayPal
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
         List<Map<String, String>> links = (List<Map<String, String>>) response.getBody().get("links");
         return links.stream()
                 .filter(link -> "approval_url".equals(link.get("rel")))
@@ -93,5 +102,8 @@ public class PayPallService {
                 .map(link -> link.get("href"))
                 .orElseThrow(() -> new RuntimeException("No PayPal approval_url found"));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 }

@@ -1,17 +1,33 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+=======
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.2</version>
+<<<<<<< HEAD
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+=======
+        <relativePath/>
+    </parent>
+
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
     <groupId>esprit</groupId>
     <artifactId>getway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>getway</name>
+<<<<<<< HEAD
     <description>getway</description>
     <url/>
     <licenses>
@@ -35,22 +51,54 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway-mvc</artifactId>
         </dependency>
+=======
+    <description>API Gateway for Royale Time</description>
+
+    <properties>
+        <java.version>17</java.version>
+        <spring-cloud.version>2023.0.1</spring-cloud.version>
+    </properties>
+
+    <dependencies>
+        <!-- Spring Cloud Gateway -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
+        </dependency>
+
+        <!-- Eureka Discovery Client -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+<<<<<<< HEAD
+=======
+        <!-- WebFlux pour Gateway -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
+        </dependency>
+
+        <!-- Pour les tests -->
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-gateway-server</artifactId>
             <version>4.2.0</version>
         </dependency>
     </dependencies>
+=======
+    </dependencies>
+
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
     <dependencyManagement>
         <dependencies>
             <dependency>

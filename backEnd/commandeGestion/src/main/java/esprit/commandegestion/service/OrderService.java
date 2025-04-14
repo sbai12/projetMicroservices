@@ -1,0 +1,81 @@
+package esprit.commandegestion.service;
+
+import esprit.commandegestion.DTO.LivraisonDTO;
+import esprit.commandegestion.DTO.ProductDto;
+import esprit.commandegestion.DTO.Statut;
+import esprit.commandegestion.DTO.UserDTO;
+import esprit.commandegestion.FeignClient.LivraisonClient;
+import esprit.commandegestion.FeignClient.ProductClient;
+import esprit.commandegestion.FeignClient.UserClient;
+import esprit.commandegestion.entity.Orderr;
+import esprit.commandegestion.repo.OrderRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Optional;
+
+@Service
+
+public class OrderService {
+    @Autowired
+    OrderRepository orderRepository;
+   UserClient userClient;
+    ProductClient productClient;
+    LivraisonClient livraisonClient;
+    public void traiterCommande(Long userId) {
+        UserDTO user = userClient.getUserById(userId);
+        System.out.println("Commande associée à l'utilisateur : " + user.getFirstName());
+        // logiques de commande ici
+    }
+    public OrderService(LivraisonClient livraisonClient) {
+        this.livraisonClient = livraisonClient;
+    }
+
+    public void traiterCommandeEtLivraison(Orderr commande) {
+        // Crée la livraison associée à cette commande
+        LivraisonDTO livraison = new LivraisonDTO();
+        livraison.setOrderId(commande.getId());
+        livraison.setAdresse(commande.getDeliveryAddress());
+        livraison.setTransporteur("DHL");
+        livraison.setStatut(Statut.EN_ATTENTE);
+        livraison.setDateLivraisonPrevue(LocalDateTime.now().plusDays(3));
+
+        LivraisonDTO saved = livraisonClient.creerLivraison(livraison);
+        System.out.println("Livraison créée : " + saved.getId());
+    }
+
+
+    // Création d'une commande
+    public Orderr createOrder(Orderr orderr) {
+        return orderRepository.save(orderr);
+    }
+
+    // Récupérer une commande par son ID
+    public Optional<Orderr> getOrderById(Long id) {
+        return orderRepository.findById(id);
+    }
+
+    // Récupérer toutes les commandes
+    public List<Orderr> getAllOrders() {
+        return orderRepository.findAll();
+    }
+
+    // Mettre à jour une commande existante
+    public Orderr updateOrder(Long id, Orderr orderrDetails) {
+        Orderr orderr = orderRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+        orderr.setDeliveryAddress(orderrDetails.getDeliveryAddress());
+        orderr.setStatus(orderrDetails.getStatus());
+        return orderRepository.save(orderr);
+    }
+
+    // Supprimer une commande
+    public void deleteOrder(Long id) {
+        orderRepository.deleteById(id);
+    }
+    public void afficherProduit(int id) {
+        ProductDto produit = productClient.getProductById(id);
+        System.out.println("Produit reçu : " + produit.getArtdesign());
+}}

@@ -1,0 +1,20 @@
+.custom-navbar {
+    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.2);
+    border-bottom: 2px solid gold;
+  }
+  
+  .navbar-brand {
+    font-family: 'Georgia', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(151, 135, 43) !important;
+  }
+  
+  .navbar .form-control {
+    border-radius: 20px;
+  }
+  
+  .navbar .btn-outline-warning {
+    border-radius: 20px;
+  }
+  

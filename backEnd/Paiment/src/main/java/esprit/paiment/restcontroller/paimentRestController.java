@@ -9,8 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+<<<<<<< HEAD
 @RestController
 @CrossOrigin(origins = "http://localhost:4200") // Autorise l'origine de ton frontend
+=======
+
+@RestController
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
 @RequestMapping("/paiement")
 public class paimentRestController {
 
@@ -23,7 +28,10 @@ public class paimentRestController {
     private PayPallService payPallService;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
     @PostMapping("/create")
     public paiment createPayment(@RequestBody paiment p) {
         // Créer un paiement PayPal et obtenir l'URL de redirection
@@ -35,9 +43,16 @@ public class paimentRestController {
         // Enregistrer l'objet paiment avec le statut "PENDING"
         p.setStatus("PENDING");
 
+<<<<<<< HEAD
         paymentService.createPayment(p);
 
         return p;
+=======
+        // Sauvegarder le paiement dans la base de données
+        paymentService.createPayment(p);
+
+        return p;  // Retourner l'objet paiment avec l'URL de redirection
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
     }
 
 
@@ -47,6 +62,10 @@ public class paimentRestController {
     }
     @GetMapping("/execute")
     public String executePayment(@RequestParam String paymentId, @RequestParam String payerId) {
+<<<<<<< HEAD
+=======
+        // Utiliser les informations de paymentId et payerId pour exécuter le paiement final sur PayPal
+>>>>>>> ac0fd6d813d7f485f335f18847b9e07b523de451
         return "Paiement exécuté avec paymentId: " + paymentId + " et payerId: " + payerId;
     }
     @GetMapping("/cancel")

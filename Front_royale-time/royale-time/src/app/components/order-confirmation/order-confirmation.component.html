@@ -1,0 +1,22 @@
+<h2>Confirmation de commande</h2>
+
+<!-- Liste des produits sélectionnés -->
+<ul>
+  <li *ngFor="let produit of selectedItems">
+    {{ produit.nom }} - {{ produit.prix }}
+  </li>
+</ul>
+
+<p><strong>Total :</strong> {{ total | currency:'EUR' }}</p>
+
+<form (ngSubmit)="validerCommande()">
+  <label>Nom :</label>
+  <input [(ngModel)]="nom" name="nom" class="form-control" required>
+
+  <label>Adresse :</label>
+  <input [(ngModel)]="adresse" name="adresse" class="form-control" required>
+
+  <button class="btn btn-success mt-2" type="submit">Valider la commande</button>
+  
+  <app-paypal-payment *ngIf="commandeValidee"></app-paypal-payment>
+</form>
