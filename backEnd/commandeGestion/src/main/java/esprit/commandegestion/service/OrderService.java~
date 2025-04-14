@@ -2,7 +2,6 @@ package esprit.commandegestion.service;
 
 import esprit.commandegestion.DTO.LivraisonDTO;
 import esprit.commandegestion.DTO.ProductDto;
-import esprit.commandegestion.DTO.Statut;
 import esprit.commandegestion.DTO.UserDTO;
 import esprit.commandegestion.FeignClient.LivraisonClient;
 import esprit.commandegestion.FeignClient.ProductClient;
@@ -39,7 +38,7 @@ public class OrderService {
         livraison.setOrderId(commande.getId());
         livraison.setAdresse(commande.getDeliveryAddress());
         livraison.setTransporteur("DHL");
-        livraison.setStatut(Statut.EN_ATTENTE);
+        livraison.setStatut("EN_ATTENTE");
         livraison.setDateLivraisonPrevue(LocalDateTime.now().plusDays(3));
 
         LivraisonDTO saved = livraisonClient.creerLivraison(livraison);

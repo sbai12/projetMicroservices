@@ -1,0 +1,4 @@
+package esprit.commandegestion.DTO;
+
+public class UserDTO {
+}

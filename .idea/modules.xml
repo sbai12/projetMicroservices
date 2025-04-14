@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/projetMicroservices.iml" filepath="$PROJECT_DIR$/.idea/projetMicroservices.iml" />
-=======
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/.idea/projetMicroservices.iml" filepath="$PROJECT_DIR$/.idea/projetMicroservices.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/projetMicroservice.iml" filepath="$PROJECT_DIR$/.idea/projetMicroservice.iml" />
->>>>>>> 94f4722f1ba554600f583c468e262bc5dede7ea4
->>>>>>> 8ff1c9f5278890ea14a0578bae16907457fbe733
     </modules>
   </component>
 </project>
