@@ -1,0 +1,57 @@
+/* src/app/components/home/home.component.css */
+.produits {
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #2d003e;  /* Ajout d'un fond sombre pour faire ressortir les cartes */
+}
+
+.produit-card {
+  display: inline-block;
+  width: 250px;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #3b0066; /* Fond violet foncé */
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3); /* Ombre douce dorée */
+  transition: transform 0.3s ease; /* Animation de transformation pour l'effet hover */
+}
+
+.produit-card:hover {
+  transform: translateY(-5px); /* Effet de survol qui soulève légèrement la carte */
+}
+
+.produit-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease; /* Animation douce sur l'image */
+}
+
+.produit-card img:hover {
+  transform: scale(1.05); /* Zoom léger au survol de l'image */
+}
+
+.add-to-cart-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour l'effet hover */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #444; /* Changement de couleur au survol */
+  transform: scale(1.05); /* Légère augmentation de la taille du bouton */
+}
+
+.panier-icon {
+  width: 20px;
+  height: 20px;
+}

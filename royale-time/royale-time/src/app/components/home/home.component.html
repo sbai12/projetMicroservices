@@ -1,0 +1,19 @@
+<!-- src/app/components/home/home.component.html -->
+<app-navbar></app-navbar>
+
+<section class="produits">
+  <h2>Nos Produits</h2>
+
+  <!-- Affichage de la liste des produits -->
+  <div class="produit-card" *ngFor="let produit of produits">
+    <!-- Si l'image est null ou vide, afficher l'image par défaut -->
+    <img [src]="produit.artimg || 'assets/default-image.jpg'" alt="{{ produit.nom }}">
+    <h3>{{ produit.nom || 'Nom indisponible' }}</h3> <!-- Si le nom est null, afficher 'Nom indisponible' -->
+    <p>{{ produit.prix || 'Prix indisponible' }}€</p> <!-- Si le prix est null ou égal à 0, afficher 'Prix indisponible' -->
+    <p>{{ produit.artdesc || 'Description indisponible' }}</p> <!-- Si la description est null, afficher 'Description indisponible' -->
+    <button class="add-to-cart-btn" (click)="addToCart(produit)">
+      <img src="assets/panier.jpg" alt="Panier" class="panier-icon">
+      Ajouter au panier
+    </button>
+  </div>
+</section>
