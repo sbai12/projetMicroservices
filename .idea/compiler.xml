@@ -9,7 +9,7 @@
         <module name="getway" />
         <module name="eureka" />
       </profile>
-      <profile name="Annotation profile for demo" enabled="true">
+      <profile name="Annotation profile for Paiment" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -18,8 +18,8 @@
         </processorPath>
         <module name="demandeGestion" />
         <module name="ProductGestion" />
-        <module name="demo" />
         <module name="Paiment" />
+        <module name="demo" />
         <module name="commandeGestion" />
         <module name="UserGestion" />
       </profile>

@@ -1,0 +1,56 @@
+:root {
+    --gold: #d4af37;
+    --deep-purple: #2c003e;
+    --luxury-gray: #f0f0f0;
+    --white: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--deep-purple);
+    color: var(--white);
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .hero {
+    max-width: 700px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: var(--gold);
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    background-color: var(--gold);
+    color: var(--deep-purple);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #c49b2d;
+  }
+  

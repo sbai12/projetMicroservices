@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
+@CrossOrigin(origins = "http://localhost:4200") // Autorise l'origine de ton frontend
 @RequestMapping("/paiement")
 public class paimentRestController {
 
@@ -21,6 +21,7 @@ public class paimentRestController {
     private PaymentService paymentService;
     @Autowired
     private PayPallService payPallService;
+
 
 
     @PostMapping("/create")
@@ -34,10 +35,9 @@ public class paimentRestController {
         // Enregistrer l'objet paiment avec le statut "PENDING"
         p.setStatus("PENDING");
 
-        // Sauvegarder le paiement dans la base de données
         paymentService.createPayment(p);
 
-        return p;  // Retourner l'objet paiment avec l'URL de redirection
+        return p;
     }
 
 
@@ -47,7 +47,6 @@ public class paimentRestController {
     }
     @GetMapping("/execute")
     public String executePayment(@RequestParam String paymentId, @RequestParam String payerId) {
-        // Utiliser les informations de paymentId et payerId pour exécuter le paiement final sur PayPal
         return "Paiement exécuté avec paymentId: " + paymentId + " et payerId: " + payerId;
     }
     @GetMapping("/cancel")
